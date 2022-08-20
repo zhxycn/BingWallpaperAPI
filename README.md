@@ -4,7 +4,12 @@
   <img alt="Stars" src="https://img.shields.io/github/stars/zhxycn/BingWallpaperAPI">
 </p>
 
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fzhxycn%2FBingWallpaperAPI.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fzhxycn%2FBingWallpaperAPI?ref=badge_large)
+
 # BingWallpaperAPI
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fzhxycn%2FBingWallpaperAPI.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fzhxycn%2FBingWallpaperAPI?ref=badge_shield)
+
 基于 PHP 的必应壁纸 API 。
 
 ## 配置修改
