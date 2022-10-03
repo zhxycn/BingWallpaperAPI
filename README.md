@@ -1,59 +1,88 @@
-<p align="center">
-  <img alt="License" src="https://img.shields.io/github/license/zhxycn/BingWallpaperAPI">
-  <img alt="Size" src="https://img.shields.io/github/languages/code-size/zhxycn/BingWallpaperAPI">
-  <img alt="Stars" src="https://img.shields.io/github/stars/zhxycn/BingWallpaperAPI">
-</p>
+<div align="center">
 
 # BingWallpaperAPI
-基于 PHP 的必应壁纸 API 。
 
-## 配置修改
-请修改 `index.php` 第 2-3 行。
+[![GitHub stars](https://img.shields.io/github/stars/zhxycn/BingWallpaperAPI?style=flat-square)](https://github.com/zhxycn/BingWallpaperAPI/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/zhxycn/BingWallpaperAPI?style=flat-square)](https://github.com/zhxycn/BingWallpaperAPI/network)
+[![GitHub license](https://img.shields.io/github/license/zhxycn/BingWallpaperAPI?style=flat-square)](https://github.com/zhxycn/BingWallpaperAPI/blob/main/LICENSE)
 
-第2行 `$ago = '0'` 表示时间。
-值|含义
+A simple PHP Bing wallpaper API.  
+一个简易的 PHP 必应壁纸 API 。
+
+</div>
+
+## Deploy | 部署
+1. Modify `index.php` line 3-4.  
+修改 `index.php` 第 3-4 行。
+
+<details>
+<summary>Details | 详细说明</summary>
+
+`$ago` in line 3 is how many days ago.  
+第3行 `$ago` 表示日期。
+Parameter \| 值|Content \| 含义
 -|-
-0|今天
-1|昨天
-2|前天
-……|……
+0|today \| 今天
+1|yesterday \| 昨天
+2|the day before yesterday \| 前天
+…|…
 
-第3行 `$region = '1'` 表示位置。
-值|含义
+`$region` in line 4 is Bing region.  
+第4行 `$region` 表示位置。
+Parameter \| 值|Content \| 含义
 -|-
-0|必应国际版
-1|必应国内版
+0|global version of Bing \| 必应国际版
+1|Chinese version of Bing \| 必应国内版
 
-## 参数说明
-参数名|含义
+</details>
+
+2. Upload `index.php` to the server.  
+上传 `index.php` 至服务器。
+
+## How to use | 使用方法
+Parameter \| 参数|Content \| 含义
 -|-
-region|位置
-encode|返回数据格式
+ago|how many days ago \| 日期
+region|region \| 位置
+encode|data format \| 返回数据格式
 
-无参数则返回图片。
+>The default parameter is the `index.php` line 3-4.  
+缺省参数则为 `index.php` 3-4 行默认值。
 
-#### 详细参数说明
+<details>
+<summary>Details | 详细说明</summary>
+
+**ago**
+Parameter \| 值|Content \| 含义
+-|-
+0|today \| 今天
+1|yesterday \| 昨天
+2|the day before yesterday \| 前天
+…|…
+
 **region**
-
-值|含义
+Parameter \| 值|Content \| 含义
 -|-
-global|全球版
-cn|中国版
+global|global version of Bing \| 必应国际版
+cn|Chinese version of Bing \| 必应国内版
 
 **encode**
-
-值|含义
+Parameter \| 值|Content \| 含义
 -|-
-json|返回 JSON 格式数据
+json|return JSON format data \| 返回 JSON 格式数据
 
-#### 示例
+</details>
+
+### Example | 示例
 ```
 /index.php
-/index.php?region=cn&encode=json
+/index.php?ago=0&region=cn&encode=json
 ```
 
-## 图片参数
+## Image Properties | 图片参数
+Resolution `1920x1080`  
 分辨率 `1920x1080`
 
-## 关于
->© [zhxy-CN](https://github.com/zhxycn), Released under the [MIT](./LICENSE) License.
+## About | 关于
+>© [zhxy-CN](https://github.com/zhxycn), Released under the [MIT](./LICENSE) License.  
+Image copyright owned by [Bing](https://www.bing.com).
