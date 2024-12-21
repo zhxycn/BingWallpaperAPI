@@ -73,26 +73,42 @@ export const handler = async (event) => {
     try {
         const data = await fetchData(url);
 
-        if (event.queryStringParameters?.encode === "json") {
-            return {
+        const corsHeaders = {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "*",
+            "Access-Control-Allow-Methods": "GET, OPTIONS"
+        };
+
+        const handlers = {
+            json: () => ({
                 statusCode: 200,
                 body: JSON.stringify(data),
-                headers: { "Content-Type": "application/json" }
-            };
-        } else if (event.queryStringParameters?.encode === "xml") {
-            const xmlData = jsonToXML(data, "images");
-            return {
-                statusCode: 200,
-                body: xmlData,
-                headers: { "Content-Type": "application/xml" }
-            };
-        } else {
-            const responseUrl = `https://${region === "0" ? "bing.com" : "cn.bing.com"}${data.images[0].url}`;
-            return {
-                statusCode: 302,
-                headers: { Location: responseUrl }
-            };
-        }
+                headers: {
+                    ...corsHeaders,
+                    "Content-Type": "application/json",
+                },
+            }),
+            xml: () => {
+                const xmlData = jsonToXML(data, "images");
+                return {
+                    statusCode: 200,
+                    body: xmlData,
+                    headers: {
+                        ...corsHeaders,
+                        "Content-Type": "application/xml",
+                    },
+                };
+            },
+        };
+
+        const responseUrl = `https://${region === "0" ? "bing.com" : "cn.bing.com"}${data.images[0].url}`;
+        return (handlers[event.queryStringParameters?.encode] || (() => ({
+            statusCode: 302,
+            headers: {
+                ...corsHeaders,
+                location: responseUrl,
+            },
+        })))();
     } catch (error) {
         return handleError(error);
     }
