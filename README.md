@@ -11,6 +11,9 @@ A simple PHP Bing wallpaper API.
 
 </div>
 
+⚠ **PHP version is no longer maintained | PHP 版本已暂停维护。**  
+⚠ **Switch to the `lambda` branch for AWS Lambda version. | AWS Lambda 版本请转到 `lambda` 分支。**
+
 ## Deploy | 部署
 1. Modify `index.php` line 3-4.  
 修改 `index.php` 第 3-4 行。
@@ -85,4 +88,3 @@ Resolution `1920x1080`
 
 ## About | 关于
 >© [zhxy-CN](https://github.com/zhxycn), Released under the [MIT](./LICENSE) License.  
-Image copyright owned by [Bing](https://www.bing.com).
