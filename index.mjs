@@ -85,6 +85,7 @@ export const handler = async (event) => {
             fullstartdate,
             enddate,
             img: {
+                id: `${urlbase.replace('/th?id=', '')}`,
                 fhd: `https://${domain}${urlbase}_1920x1080.jpg`,
                 uhd: `https://${domain}${urlbase}_UHD.jpg`,
             },

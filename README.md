@@ -39,6 +39,7 @@ The `original` part of the API response contains the original interface response
   "fullstartdate": "202412220800",
   "enddate": "20241223",
   "img": {
+    "id": "OHR.CrystalPier_ROW3716949371",
     "fhd": "https://bing.com/th?id=OHR.CrystalPier_ROW3716949371_1920x1080.jpg",
     "uhd": "https://bing.com/th?id=OHR.CrystalPier_ROW3716949371_UHD.jpg"
   },
@@ -55,6 +56,7 @@ The `original` part of the API response contains the original interface response
   <fullstartdate>202412220800</fullstartdate>
   <enddate>20241223</enddate>
   <img>
+    <id>OHR.CrystalPier_ROW3716949371</id>
     <fhd>https://bing.com/th?id=OHR.CrystalPier_ROW3716949371_1920x1080.jpg</fhd>
     <uhd>https://bing.com/th?id=OHR.CrystalPier_ROW3716949371_UHD.jpg</uhd>
   </img>
