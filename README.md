@@ -17,82 +17,12 @@ A simple Bing wallpaper API running on AWS Lambda.
 4. Click your link and enjoy\~
 
 ## Parameters
-| Parameter  | Acceptable Values                          | Default Value | Required | Description                          |
-|------------|--------------------------------------------|---------------|----------|--------------------------------------|
-| ago        | 0-7                                        | 0             | No       | Number of days ago for the image     |
-| lang       | See [Region & Language](#region--language) |               | No       | Region & language                    |
-| resolution | fhd, uhd                                   | fhd           | No       | Image resolution                     |
-| encode     | json, xml                                  |               | No       | Response format                      |
-
-### Region & Language
-
-<details>
-<summary>Click to show</summary>
-
-`fr-xl`: Afrique francophone (français)  
-`es-xl`: América Latina (español)  
-`es-ar`: Argentina (español)  
-`en-au`: Australia (English)  
-`fr-be`: Belgique (français)  
-`nl-be`: België (Nederlands)  
-`pt-br`: Brasil (português)  
-`en-ca`: Canada (English)  
-`fr-ca`: Canada (français)  
-`es-cl`: Chile (español)  
-`es-co`: Colombia (español)  
-`da-dk`: Danmark (Dansk)  
-`de-de`: Deutschland (Deutsch)  
-`es-es`: España (español)  
-`fr-fr`: France (français)  
-`en-in`: India (English)  
-`mr-in`: India (मराठी)  
-`hi-in`: India (हिंदी)  
-`bn-in`: India (বাংলা)  
-`te-in`: India (తెలుగు)  
-`id-id`: Indonesia (Bahasa Indonesia)  
-`en-xl`: International Edition (English)  
-`en-ie`: Ireland (English)  
-`it-it`: Italia (italiano)  
-`hu-hu`: Magyarország (magyar)  
-`en-my`: Malaysia (English)  
-`es-mx`: México (español)  
-`nl-nl`: Nederland (Nederlands)  
-`en-nz`: New Zealand (English)  
-`nb-no`: Norge (norsk, bokmål)  
-`es-pe`: Perú (español)  
-`en-ph`: Philippines (English)  
-`pl-pl`: Polska (polski)  
-`pt-pt`: Portugal (Português)  
-`de-ch`: Schweiz (Deutsch)  
-`en-sg`: Singapore (English)  
-`en-za`: South Africa (English)  
-`fr-ch`: Suisse (français)  
-`fi-fi`: Suomi (suomi)  
-`sv-se`: Sverige (svenska)  
-`tr-tr`: Türkiye (Türkçe)  
-`en-ae`: United Arab Emirates (English)  
-`en-gb`: United Kingdom (English)  
-`en-us`: United States (English)  
-`es-us`: United States (español)  
-`es-ve`: Venezuela (español)  
-`vi-vn`: Việt Nam (Tiếng Việt)  
-`de-at`: Österreich (Deutsch)  
-`cs-cz`: Česká republika (čeština)  
-`el-gr`: Ελλάδα (ελληνικά)  
-`ru-xl`: Международное издание (Pусский)  
-`ru-ru`: Россия (Pусский)  
-`he-il`: ישראל (עברית)  
-`ar-ae`: الإمارات العربية المتحدة (العربية)  
-`ar-sa`: المملكة العربية السعودية (العربية)  
-`ar-eg`: مصر (العربية)  
-`th-th`: ไทย (ไทย)  
-`zh-cn`: 中华人民共和国 (简体中文)  
-`zh-tw`: 中國台灣 (繁體中文)  
-`ja-jp`: 日本 (日本語)  
-`zh-hk`: 香港特别行政區 (繁體中文)  
-`ko-kr`: 한국 (한국어)  
-
-</details>
+| Parameter  | Acceptable Values    | Default Value | Required | Description                      |
+|------------|----------------------|---------------|----------|----------------------------------|
+| ago        | 0-7                  | 0             | No       | Number of days ago for the image |
+| lang       | (ISO 639 & ISO 3166) |               | No       | Region & language                |
+| resolution | fhd, uhd             | fhd           | No       | Image resolution                 |
+| encode     | json, xml            |               | No       | Response format                  |
 
 ## How to Use
 ### Get Image
@@ -142,11 +72,11 @@ The `original` part of the API response contains the original interface response
 ### Examples
 If you want to get an ultra-high-definition image from Bing China:
 ```
-https://api.collei.net/bingwallpaper?lang=zh-cn&resolution=uhd
+https://api.owo.cab/bingwallpaper?lang=zh-cn&resolution=uhd
 ```
 If you want to use the API to get 3-day-ago image information from Bing:
 ```
-https://api.collei.net/bingwallpaper?ago=3&encode=json
+https://api.owo.cab/bingwallpaper?ago=3&encode=json
 ```
 
 ## About
